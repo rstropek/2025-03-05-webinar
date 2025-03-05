@@ -1,0 +1,29 @@
+@azure_endpoint = {{$dotenv AZURE_OPENAI_URL}}
+
+###
+# @name Simple completion
+POST https://api.openai.com/v1/chat/completions
+Content-Type: application/json
+Authorization: Bearer {{$dotenv OPENAI_API_KEY}}
+
+{
+    "model": "gpt-4o",
+    "messages": [
+      {
+        "role": "developer",
+        "content": "You are a helpful assistant."
+      },
+      {
+        "role": "user",
+        "content": "Hello!"
+      }
+    ]
+}
+
+###
+# @name Simple completion (Azure)
+POST {{$dotenv AZURE_OPENAI_URL}}/openai/deployments/gpt-4o/chat/completions?api-version=2024-10-21
+Content-Type: application/json
+api-key: {{$dotenv AZURE_OPENAI_API_KEY}}
+
+<@ ./simple_azure_request.json
