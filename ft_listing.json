@@ -1,0 +1,24 @@
+{
+    "name": "get_project_hierarchy",
+    "description": "Retrieve the folder and file hierarchy for a project",
+    "strict": true,
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "projectPath": {
+          "type": "string",
+          "description": "The directory to get. Use '/' for the root directory"
+        },
+        "depth": {
+          "type": "integer",
+          "description": "The depth level to traverse within the project hierarchy. Use -1 for all levels"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+          "projectPath",
+          "depth"
+      ]
+    }
+  }
+  

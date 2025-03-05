@@ -1,0 +1,15 @@
+{
+    "name": "simple-node-app",
+    "type": "folder",
+    "children": [
+      {
+        "name": "index.js",
+        "type": "file"
+      },
+      {
+        "name": "package.json",
+        "type": "file"
+      }
+    ]
+  }
+  
