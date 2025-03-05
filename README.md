@@ -11,6 +11,7 @@ This project provides a setup for testing and experimenting with OpenAI's API an
 - **prompt_flowers.md**: Example prompt for a flower shop assistant.
 - **dotenv_template**: Template for the required environment variables.
 - **.env**: Configuration file containing API keys and endpoints (not tracked in git).
+- **to_single_line.js**: Node.js script to convert multi-line text to single-line text by replacing newline characters with `\n`. Useful for formatting prompts for the API requests. Give it the file name as an argument; it will print the result to the console.
 
 ## Getting Started
 
